@@ -33,7 +33,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ isDark = true }) => 
 
     try {
       const message = await authService.register({ name, email, password });
-      setSuccess(message || 'Account created successfully! Please check your email to verify your account.');
+      setSuccess(message || 'Account created successfully! Redirecting to login page...');
       
       // Clear form
       setName('');
